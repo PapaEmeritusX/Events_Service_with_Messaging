@@ -1,0 +1,36 @@
+spring:
+  config:
+    activate:
+      on-profile: artimes-template
+
+  artemis:
+    broker-url: tcp://localhost:61616
+    user: user
+    password: 1213
+
+---
+spring:
+  config:
+    activate:
+      on-profile: rabbitmq-template
+
+  rabbitmq:
+    host: localhost
+    ports:
+      - 5672:5672
+      - 15672:15672
+    username: guest
+    password: guest
+    template:
+      exchange: events.services
+      routing-key: event.request
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: kafka-template
+  kafka:
+    bootstrap-servers:
+      -

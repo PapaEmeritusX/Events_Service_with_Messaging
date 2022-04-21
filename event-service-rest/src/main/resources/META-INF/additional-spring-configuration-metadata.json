@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "events.description",
+      "type": "java.lang.String",
+      "description": "Description for Events Service application."
+    },
+    {
+      "name": "events.version",
+      "type": "java.lang.String",
+      "description": "Version of the Events Service application."
+    },
+    {
+      "name": "events.version",
+      "type": "java.lang.String",
+      "description": "Description for events.version."
+    }
+  ] }
