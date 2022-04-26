@@ -33,4 +33,14 @@ spring:
       on-profile: kafka-template
   kafka:
     bootstrap-servers:
-      -
+      - localhost:9092
+    producer:
+      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        group-id: events_listener
+        properties:
+          spring.json.trusted.packages: events.*
+
+
